@@ -1,0 +1,24 @@
+---
+title: "A Very Cool Map"
+author: "Pascal Spijkerman"
+date: "11/01/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This Map is an overview of the locations I often go to Holiday. 
+
+```{r, message = FALSE}
+library(leaflet)
+my_map =  leaflet() %>%
+  addTiles %>%
+  addMarkers(lat = 40.4637, lng= 3.7492 ,popup = "Spain") %>%
+  addMarkers(lat = 52.1326, lng= 5.2913 ,popup = "Holland") %>%
+  addMarkers(lat = 41.8719, lng= 12.5674,popup = "Italy") %>%
+  addMarkers(lat = 47.5162, lng= 14.5501 ,popup = "Austria") %>%
+  addMarkers(lat = 46.2276, lng= 2.2137,popup = "Spain")
+my_map
+```
